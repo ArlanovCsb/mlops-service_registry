@@ -47,4 +47,4 @@ if __name__ == '__main__':
    
    app.run(debug=True if APP_MODE == 'debug' else False,
            host='0.0.0.0',
-           port=8080)
+           port=5000)
