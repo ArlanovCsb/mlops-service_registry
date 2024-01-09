@@ -15,7 +15,7 @@ EXTERNAL_URL: str = os.environ['EXTERNAL_URL']
 EXTERNAL_MAX_RETRIES: int = int(os.environ['EXTERNAL_MAX_RETRIES'])
 
 SD_REDIS_HOST: str = os.environ['SD_REDIS_HOST']
-SD_REDIS_PORT: int = int(os.environ['SD_REDIS_PORT'])
+SD_REDIS_PORT: str = str(os.environ['SD_REDIS_PORT'])
 SD_REDIS_PASSWORD: str = os.environ['SD_REDIS_PASSWORD']
 SD_REPLICAS_KEY: str = os.environ['SD_REPLICAS_KEY']
 
@@ -47,4 +47,4 @@ if __name__ == '__main__':
    
    app.run(debug=True if APP_MODE == 'debug' else False,
            host='0.0.0.0',
-           port=5000)
+           port=8080)
